@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+    color: #ffffff;
+    user-select: none;
+}
+
+#map-container {
+    position: relative;
+    display: block;
+    margin-top: 50px;
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    cursor: crosshair;
+}
+
+#map {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    object-fit: fill;
+    overflow: hidden;
+    color: red;
+    cursor: crosshair;
+}
+
+.marker {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 25%;
+    cursor: not-allowed;
+    transform: translate(-50%, -50%);
+}
+
+
+button {
+    color: whitesmoke;
+    fill: #171717;
+    background-color: #171717;
+    border-color: whitesmoke;
+    border-style: dashed;
+    cursor: pointer;
+    user-select: none;
+}
+
+#export {
+    color-scheme: dark;
+    color: whitesmoke;
+    object-fit: fill;
+    height: 50px;
+    width: 200px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#doesnotsend {
+    color: red;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenTTD Town Mapper</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href=
+    "https://cdn.discordapp.com/icons/142724111502802944/cc0e0058d1d6d9a2d9d37f290385ba65.webp"
+            type="image/x-icon" />
+</head>
+<body style="background-color: #171717;">
+    <h1>OpenTTD Town Mapper v1</h1>
+    <p>Hello there! Welcome to the OpenTTD Town Mapper!</p>
+    <p>Import your image and enter the resolution:</p>
+    <div style="padding: 10px;">
+        <input type="file" id="image-upload" accept="image/*">
+    </div>
+    <div class="input-container">
+        <label for="width">Width (px):</label>
+        <input type="number" id="width" placeholder="Enter width">
+        <label for="height">Height (px):</label>
+        <input type="number" id="height" placeholder="Enter height">
+        <button onclick="resizeDiv()">Resize</button>
+      </div>
+    
+    <p>To place towns, click on the map and enter town data. To remove towns, right-click over the town marker.</p>
+    <p id="doesnotsend">This project does <u>not</u> send any image data to external or third party servers.</p>
+    <button id="export">Export JSON!</button>
+    <div id="map-container">
+        <img id="map" alt="No map uploaded!" />
+    </div>
+    <script src="script.js"></script>
+    <script>
+        function resizeDiv() {
+          const width = document.getElementById('width').value;
+          const height = document.getElementById('height').value;
+          
+          const div = document.getElementById('map-container');
+    
+          if (width && height) {
+            div.style.width = `${width}px`;
+            div.style.height = `${height}px`;
+          } else {
+            alert('Please enter valid width and height!');
+          }
+        }
+      </script>
+</body>
+</html>
